@@ -7,14 +7,13 @@ app.set('views', __dirname + '/views');
 app.use(express.static('public'));
 
 app.get('/', (req, res)=>{
-    res.render('index')
+    res.render('index',{
+        precio: 1230,
+        user: "Fernando Hugo Alvarez"
+    })
 })
 
-app.get('/login', (req, res)=>{
-    res.render('login')
-})
-
-app.listen(8080, ()=>{
-    console.log('Servidor ejecutando en el puerto: 8080')
+app.listen(3000, ()=>{
+    console.log('Servidor ejecutando en el puerto: 3000')
 })
 
